@@ -7,7 +7,7 @@ from django.db import models
 class Task(models.Model):
     task = models.CharField(max_length=50)
     priority = models.CharField(max_length=6)
-    date = models.DateTimeField()
+    date = models.CharField(max_length=10)
     completed = models.BooleanField(default=False)
 
     def __str__(self):
